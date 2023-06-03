@@ -42,8 +42,28 @@
       "pages": ["api-reference/endpoint/auth/login", "api-reference/endpoint/auth/register", "api-reference/endpoint/auth/getAccessToken"]
     },
     {
+      "group": "Master/Geography",
+      "pages": ["api-reference/endpoint/master/geo/province", "api-reference/endpoint/master/geo/district"]
+    },
+    {
+      "group": "Master/Amenity",
+      "pages": ["api-reference/endpoint/master/amenity/create", "api-reference/endpoint/master/amenity/get"]
+    },
+    {
+      "group": "Master/Tag",
+      "pages": ["api-reference/endpoint/master/tag/create", "api-reference/endpoint/master/tag/get"]
+    },
+    {
       "group": "User",
       "pages": ["api-reference/endpoint/user/changeAvatar"]
+    },
+    {
+      "group": "Partner",
+      "pages": ["null"]
+    },
+    {
+      "group": "Partner/Hotel",
+      "pages": ["ull"]
     }
   ],
   "footerSocials": {

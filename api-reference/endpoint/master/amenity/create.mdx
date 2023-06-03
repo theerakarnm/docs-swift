@@ -1,0 +1,109 @@
+---
+title: 'CREATE Amenity'
+api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/master/amenity'
+description: 'This API is used to create a new amenity.'
+---
+
+> Only `ADMIN` can access this API.
+
+### Body
+
+<ParamField
+  body='name'
+  type='string'
+  required>
+  This is the name of the amenity.
+</ParamField>
+
+<ParamField
+  body='icon'
+  type='File'
+  required>
+  This is the icon of the amenity.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField name="data" type="object">
+
+Data of the response.
+
+<Expandable title="Toggle object">
+
+<ResponseField
+  name='uid'
+  type='string'>
+  This is the uid of the amenity.
+</ResponseField>
+
+<ResponseField
+  name='name'
+  type='string'>
+  This is the name of the amenity.
+</ResponseField>
+
+<ResponseField
+  name='createdAt'
+  type='Date'>
+  This is the date the amenity was created.
+</ResponseField>
+
+<ResponseField
+  name='updatedAt'
+  type='Date'>
+  This is the date the amenity was updated.
+</ResponseField>
+
+<ResponseField
+  name='authorUid'
+  type='string'>
+  This is the uid of the author.
+</ResponseField>
+
+<ResponseField
+  name='active'
+  type='boolean'>
+  This is the status of the amenity.
+</ResponseField>
+
+<ResponseField
+  name='imagesUid'
+  type='string'>
+  This is the uid of the image.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "timestamp": "2023-06-03T10:58:45.367Z",
+  "data": {
+    "uid": "clifvsmzt00049tny92tqfgjg",
+    "name": "Parking",
+    "createdAt": "2023-06-03T10:58:44.970Z",
+    "updatedAt": "2023-06-03T10:58:44.970Z",
+    "authorUid": "clifvae0100039t84jo13ujww",
+    "active": true,
+    "imagesUid": "5adc7314-ffe9-4131-9221-deefcb479c6d"
+  },
+  "message": "SUCCESS"
+}
+```
+
+</ResponseExample>

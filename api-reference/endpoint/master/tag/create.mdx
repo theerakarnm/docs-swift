@@ -1,0 +1,48 @@
+---
+title: 'CREATE Tag'
+api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/master/tag'
+description: 'This API is used to create a new tag.'
+---
+
+> Only `CLIENT` can access this API.
+
+### Body
+
+<ParamField
+  body='tag'
+  type='string'
+  required>
+  This is the name of the tag.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField
+  name='data'
+  type='null'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "timestamp": "2023-06-03T18:39:23.051Z",
+  "data": null,
+  "message": "SUCCESS"
+}
+```
+
+</ResponseExample>

@@ -1,0 +1,90 @@
+---
+title: 'GET Amenity'
+api: 'GET https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/master/amenity'
+description: 'This API is used to get list of amenity.'
+---
+
+### Param
+
+<ParamField
+  query='ctx'
+  type='string'>
+  This is the context of the API.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField name="data" type="array">
+
+Data of the response.
+
+<Expandable title="Toggle data object">
+
+<ResponseField
+  name='uid'
+  type='string'>
+  This is the uid of the amenity.
+</ResponseField>
+
+<ResponseField
+  name='name'
+  type='string'>
+  This is the name of the amenity.
+</ResponseField>
+
+<ResponseField
+  name='image'
+  type='object'>
+  This is the date the amenity was created.
+</ResponseField>
+
+<Expandable title='Toggle Image object'>
+  <ResponseField
+    name='uri'
+    type='object'>
+    This is the uri of the image.
+  </ResponseField>
+</Expandable>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "timestamp": "2023-06-03T10:59:18.468Z",
+  "data": [
+    {
+      "name": "Wi-Fi5",
+      "uid": "clifvsegk00029tny3m3zvkmz",
+      "image": {
+        "url": "https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/img/83e3700a0-4405-47a3-88c2-a40a80ecb153-1685789910732-MEDIUM.jpeg"
+      }
+    },
+    {
+      "name": "Parking",
+      "uid": "clifvsmzt00049tny92tqfgjg",
+      "image": {
+        "url": "https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/img/8669be18d-3589-4b99-bb97-6ed4469415d3-1685789923292-MEDIUM.jpeg"
+      }
+    }
+  ],
+  "message": "SUCCESS"
+}
+```
+
+</ResponseExample>

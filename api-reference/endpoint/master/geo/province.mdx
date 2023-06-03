@@ -1,0 +1,70 @@
+---
+title: 'GET Province'
+api: 'GET https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/master/geo/province'
+description: 'Get Province'
+---
+
+### Response
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField name="data" type="array">
+
+Data of the response
+
+<Expandable title="Toggle object">
+
+<ResponseField
+  name='uid'
+  type='string'>
+  This is the unique identifier of the user.
+</ResponseField>
+
+<ResponseField
+  name='name'
+  type='string'>
+  This is the name of the user.
+</ResponseField>
+
+<ResponseField
+  name='updatedAt'
+  type='Date'>
+  This is the date when the user was last updated.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "timestamp": "2023-06-03T13:25:08.061Z",
+  "massage": "Success",
+  "data": [
+    {
+      "uid": "CTY0",
+      "name": "Bangkok",
+      "updatedAt": "2023-06-02T19:24:30.251Z"
+    },
+    {
+      "uid": "CTY1",
+      "name": "Samut Prakan",
+      "updatedAt": "2023-06-02T19:24:30.251Z"
+    }
+  ]
+}
+```
+
+</ResponseExample>

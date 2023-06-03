@@ -1,0 +1,66 @@
+---
+title: 'GET Tag'
+api: 'GET https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/master/tag'
+description: 'This API is used to get list of tag.'
+---
+
+### Param
+
+<ParamField
+  query='ctx'
+  type='string'>
+  This is the context of the API.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField name="data" type="array">
+
+Data of the response.
+
+<Expandable title="Toggle data object">
+
+<ResponseField
+  name='uid'
+  type='string'>
+  This is the unique id of the tag.
+</ResponseField>
+
+<ResponseField
+  name='name'
+  type='string'>
+  This is the name of the tag.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "timestamp": "2023-06-03T18:45:38.348Z",
+  "data": [
+    {
+      "name": "ห้องสะอาด",
+      "uid": "cligc90hs00039te221s4y3q9"
+    }
+  ],
+  "message": "SUCCESS"
+}
+```
+
+</ResponseExample>

@@ -1,23 +1,25 @@
 ---
 title: 'Login'
-api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/auth/login'
+api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/partner/connect/tag'
 description: 'login to account'
 ---
 
-### Body
+> This path on maintainance
+
+### Body & Query
 
 <ParamField
-  body='email'
+  body='tagId'
   type='string'
   required>
-  This is the email address of the user you want to login as.
+  This is the Tag ID of action.
 </ParamField>
 
 <ParamField
-  body='password'
-  type='string'
+  query='type'
+  type='FOLLOW | UNFOLLOW'
   required>
-  This is the password of the user you want to login as.
+  This is the type of action.
 </ParamField>
 
 ### Response

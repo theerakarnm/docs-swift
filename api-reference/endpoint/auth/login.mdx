@@ -1,0 +1,63 @@
+---
+title: 'Login'
+api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/auth/login'
+description: 'login to account'
+---
+
+### Body
+
+<ParamField
+  body='email'
+  type='string'>
+  This is the email address of the user you want to login as.
+</ParamField>
+
+<ParamField
+  body='password'
+  type='string'>
+  This is the password of the user you want to login as.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField name="data" type="object">
+
+The data of the user that was login.
+
+<Expandable title="Toggle object">
+
+<ResponseField
+  name='refreshToken'
+  type='string'>
+  This is the refresh token (refreshToken or REFRESH_TOKEN) that will be used to refresh the access token. You should save this on your end to use when refreshing the access token.
+</ResponseField>
+
+<ResponseField
+  name='accessToken'
+  type='string'>
+  This is the access token (accessToken or ACCESS_TOKEN) that will be used to authenticate the user. You should save this on your end to use when authenticating the user.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "message": 1,
+  "data": {
+    "accessToken": "eyJh...",
+    "refreshToken": "eyJh..."
+  }
+}
+```
+
+</ResponseExample>

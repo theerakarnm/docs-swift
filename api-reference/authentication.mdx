@@ -4,7 +4,7 @@ description: 'Overview page before API endpoints'
 ---
 
 ```bash
-'Authorization': 'Authorization <access_token>'
+'Authorization': 'Bearer <access_token>'
 ```
 
 ## API Access Token
@@ -14,3 +14,29 @@ When you sign up for an account, you are given an API Access Token. This token i
 ### Permissions
 
 The API Access Token is associated with a user and has the same permissions as that user. For example, if the user is an admin, the API Access Token will have admin permissions. If the user is a member, the API Access Token will have member permissions.
+
+### Forbidden or Unauthorized Handling
+
+If you are forbidden or unauthorized to access a resource, you will receive a `403 Forbidden` or `401 Unauthorized` response. The response will include a `message` field with a description of the error.
+
+<ResponseExample>
+
+```json 403 Response
+{
+  "success": false,
+  "msg": "Access denied."
+}
+```
+
+</ResponseExample>
+
+<ResponseExample>
+
+```json 400 Bad Request
+{
+  "success": false,
+  "msg": "Invalid token."
+}
+```
+
+</ResponseExample>

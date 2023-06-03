@@ -39,11 +39,11 @@
     },
     {
       "group": "Authentication",
-      "pages": ["api-reference/endpoint/auth/login"]
+      "pages": ["api-reference/endpoint/auth/login", "api-reference/endpoint/auth/register", "api-reference/endpoint/auth/getAccessToken"]
     },
     {
       "group": "User",
-      "pages": ["api-reference/endpoint/get", "api-reference/endpoint/user/create", "api-reference/endpoint/create", "api-reference/endpoint/update", "api-reference/endpoint/delete"]
+      "pages": ["api-reference/endpoint/user/changeAvatar"]
     }
   ],
   "footerSocials": {

@@ -1,0 +1,70 @@
+---
+title: 'GET Access Token'
+api: 'GET https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/auth/token/access-token'
+description: 'Get access token'
+---
+
+### Param
+
+<ParamField
+  query='refreshToken'
+  type='string'>
+  The refresh token of the user.
+</ParamField>
+
+<ParamField
+  query='uri'
+  type='string'>
+  The uri of the client.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField name="data" type="object">
+
+Data of the response
+
+<Expandable title="Toggle object">
+
+<ResponseField
+  name='token'
+  type='string'>
+  This is the access token (accessToken or ACCESS_TOKEN) that will be used to authenticate the user. You should save this on your end to use when authenticating the user.
+</ResponseField>
+
+<ResponseField
+  name='redirect'
+  type='string'>
+  This is the redirect url that you should redirect the user to. This is only returned when the user is not yet authenticated.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "message": "Success",
+  "timestamp": "2020-10-20T08:00:00.000Z",
+  "data": {
+    "token": "eyJh...",
+    "redirect": "https://example.com"
+  }
+}
+```
+
+</ResponseExample>

@@ -1,0 +1,60 @@
+---
+title: 'Change User Avarar'
+api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/api/v1/user/change-avatar'
+description: 'Change user avatar'
+---
+
+### Body FORMDATA
+
+<ParamField
+  required
+  body='avatar'
+  type='File'>
+  The avatar file to upload. File type must be either jpg, jpeg, or png. File size must be less than 5MB.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField name="data" type="object">
+
+Data of the response
+
+<Expandable title="Toggle object">
+
+<ResponseField
+  name='data'
+  type='string'>
+  The avatar url of the user.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "success": 1,
+  "user_group": {
+    "team_id": 3,
+    "token": "<user_group_token_to_auth_dashboard>",
+    "name": "Example 1",
+    "provided_id": "example_1"
+  }
+}
+```
+
+</ResponseExample>

@@ -1,0 +1,123 @@
+---
+title: 'CREATE Post'
+api: 'POST https://pgvx2y0z67.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/post'
+description: 'This API is used to create a new post.'
+---
+
+> Only `CLIENT` can access this API.
+
+### Body
+
+<ParamField
+  body='content'
+  type='string'
+  required>
+  This is the name of the tag.
+</ParamField>
+
+<ParamField
+  body='tags'
+  type='string[]'
+  required>
+  This is the ID of the tag.
+</ParamField>
+
+<ParamField
+  body='budget'
+  type='string'>
+  This is the budget of the post.
+</ParamField>
+
+<ParamField
+  body='stayDuration'
+  type='string'>
+  This is the stay duration of the post.
+</ParamField>
+
+### Response
+
+<ResponseField
+  name='message'
+  type='string'>
+  This is the message returned by the API.
+</ResponseField>
+
+<ResponseField
+  name='timestamp'
+  type='Date'>
+  The timestamp of the response.
+</ResponseField>
+
+<ResponseField name="data" type="array">
+
+Data of the response.
+
+<Expandable title="Toggle data object">
+
+<ResponseField
+  name='uid'
+  type='string'></ResponseField>
+
+<ResponseField
+  name='title'
+  type='string'></ResponseField>
+
+<ResponseField
+  name='content'
+  type='string'></ResponseField>
+
+<ResponseField
+  name='budget'
+  type='number'></ResponseField>
+
+<ResponseField
+  name='stayDuration'
+  type='string'></ResponseField>
+
+<ResponseField
+  name='isClosedDeal'
+  type='boolean'></ResponseField>
+
+<ResponseField
+  name='createdAt'
+  type='Date'></ResponseField>
+
+<ResponseField
+  name='updatedAt'
+  type='Date'></ResponseField>
+
+<ResponseField
+  name='DealStatus'
+  type='OPEN | CLOSE'></ResponseField>
+
+<ResponseField
+  name='active'
+  type='boolean'></ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Response
+{
+  "timestamp": "2023-06-05T09:03:24.003Z",
+  "data": {
+    "uid": "cliimjz0u000d9tgznsfz01tr",
+    "title": "",
+    "content": "หาที่พักใกล้ชายหาดที่รับสุนัขได้ 🐶🏖️",
+    "budget": 8000,
+    "stayDuration": "3 วัน 2 คืน",
+    "isClosedDeal": false,
+    "createdAt": "2023-06-05T09:03:22.639Z",
+    "updatedAt": "2023-06-05T09:03:22.639Z",
+    "authorUid": "cligc6pg20003mm08n5ha1sq7",
+    "DealStatus": "OPEN",
+    "active": true
+  },
+  "message": "SUCCESS"
+}
+```
+
+</ResponseExample>

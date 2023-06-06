@@ -64,6 +64,10 @@
     {
       "group": "Partner/Hotel",
       "pages": ["ull"]
+    },
+    {
+      "group": "Post",
+      "pages": ["api-reference/endpoint/post/create"]
     }
   ],
   "footerSocials": {

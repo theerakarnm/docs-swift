@@ -33,9 +33,70 @@ Data of the response.
 <Expandable title="Toggle data object">
 
 <ResponseField
+  name='total'
+  type='number'>
+  This is the total of the response.
+</ResponseField>
+
+<ResponseField
+  name='isEnd'
+  type='boolean'>
+  This is the isEnd of the response.
+</ResponseField>
+
+<ResponseField name="posts" type="Posts[]">
+
+Posts data of the response.
+
+<Expandable title="Toggle Posts object">
+
+<ResponseField
+  name='author'
+  type='object'>
+
+This is the author object of the response.
+
+<Expandable title="Toggle Posts object">
+
+<ResponseField
   name='uid'
   type='string'>
-  This is the unique id of the tag.
+  This is the uid of the user.
+</ResponseField>
+
+<ResponseField
+  name='name'
+  type='string'>
+  This is the name of the user.
+</ResponseField>
+
+<ResponseField
+  name='surname'
+  type='string'>
+  This is the surname of the user.
+</ResponseField>
+
+<ResponseField
+  name='avatar'
+  type='string'>
+  This is the avatar of the user.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseField
+  name='content'
+  type='Tag[]'>
+  This is the content of the post.
+
+<Expandable title="Toggle Tags object">
+
+<ResponseField
+  name='uid'
+  type='string'>
+  This is the uid of the tag.
 </ResponseField>
 
 <ResponseField
@@ -43,6 +104,42 @@ Data of the response.
   type='string'>
   This is the name of the tag.
 </ResponseField>
+
+<ResponseField
+  name='isMatching'
+  type='boolean'>
+  This is the isMatching of the tag.
+</ResponseField>
+
+</Expandable>
+
+</ResponseField>
+
+<ResponseField
+  name='tagMatchNum'
+  type='number'>
+  This is the name of the user.
+</ResponseField>
+
+<ResponseField
+  name='budget'
+  type='string'>
+  This is the name of the user.
+</ResponseField>
+
+<ResponseField
+  name='numHotelContacted'
+  type='number'>
+  This is the name of the user.
+</ResponseField>
+
+<ResponseField
+  name='isOpenDeal'
+  type='OPEN | CLOSE'>
+  This is the name of the user.
+</ResponseField>
+
+</Expandable>
 
 </Expandable>
 
@@ -52,13 +149,83 @@ Data of the response.
 
 ```json Response
 {
-  "timestamp": "2023-06-03T18:45:38.348Z",
-  "data": [
-    {
-      "name": "ห้องสะอาด",
-      "uid": "cligc90hs00039te221s4y3q9"
-    }
-  ],
+  "timestamp": "2023-06-05T09:03:40.734Z",
+  "data": {
+    "posts": [
+      {
+        "author": {
+          "uid": "cligc6osr0000mm0822kb8ikw",
+          "name": "Clinet",
+          "surname": "Test",
+          "avatar": null
+        },
+        "content": "หาที่พักใกล้ชายหาดที่รับสุนัขได้ 🐶🏖️ ต้องการหาที่พักที่สามารถพักกับสุนัขได้ มีสิ่งอำนวยความสะดวกสำหรับสุนัข เช่น ที่จอดรถที่ปลอดภัยและเปิดโอเพ่นสำหรับสุนัขเล่น และอยู่ใกล้ชายหาด แนะนำที่พักที่มีบริการเช่าจักรยานฟรี เพื่อให้สามารถพาสุนัขไปเที่ยวชายหาดได้ง่ายขึ้น ทริป 3 วัน 2 คืน",
+        "postTags": [
+          {
+            "uid": "cligc90hs00039te221s4y3q9",
+            "name": "ห้องสะอาด",
+            "isMatchTag": false
+          },
+          {
+            "uid": "cliimgjx400049tgzr2bui66r",
+            "name": "บรรยากาศดี",
+            "isMatchTag": false
+          },
+          {
+            "uid": "cliimgtoi00069tgzgcatlp0k",
+            "name": "มีสระว่ายน้ำ",
+            "isMatchTag": false
+          }
+        ],
+        "tagMatchNum": 0,
+        "budget": "8000 ต่อ 3 วัน 2 คืน",
+        "numHotelContacted": 0,
+        "isOpenDeal": "OPEN"
+      },
+      {
+        "author": {
+          "uid": "cligc6osr0000mm0822kb8ikw",
+          "name": "Clinet",
+          "surname": "Test",
+          "avatar": null
+        },
+        "content": "This is the Second post",
+        "postTags": [
+          {
+            "uid": "cligc90hs00039te221s4y3q9",
+            "name": "ห้องสะอาด",
+            "isMatchTag": false
+          }
+        ],
+        "tagMatchNum": 0,
+        "budget": "4000 ต่อ 3 คืน",
+        "numHotelContacted": 0,
+        "isOpenDeal": "OPEN"
+      },
+      {
+        "author": {
+          "uid": "cligc6osr0000mm0822kb8ikw",
+          "name": "Clinet",
+          "surname": "Test",
+          "avatar": null
+        },
+        "content": "This is the First post",
+        "postTags": [
+          {
+            "uid": "cligc90hs00039te221s4y3q9",
+            "name": "ห้องสะอาด",
+            "isMatchTag": false
+          }
+        ],
+        "tagMatchNum": 0,
+        "budget": "4000 ต่อ 3 คืน",
+        "numHotelContacted": 0,
+        "isOpenDeal": "OPEN"
+      }
+    ],
+    "total": 3,
+    "isEnd": true
+  },
   "message": "SUCCESS"
 }
 ```

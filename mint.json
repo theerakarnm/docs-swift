@@ -67,7 +67,7 @@
     },
     {
       "group": "Post",
-      "pages": ["api-reference/endpoint/post/create"]
+      "pages": ["api-reference/endpoint/post/create", "api-reference/endpoint/post/getPostList"]
     }
   ],
   "footerSocials": {
